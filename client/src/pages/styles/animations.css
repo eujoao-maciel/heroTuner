@@ -1,0 +1,14 @@
+@keyframes heroPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px #000);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 13px #000);
+  }
+}
+
+.animate-hero-pulse {
+  animation: heroPulse 1.8s ease-in-out infinite;
+}
