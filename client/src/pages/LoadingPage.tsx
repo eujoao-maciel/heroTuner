@@ -1,5 +1,5 @@
-import background from "../assets/background.png";
-import herotuner from "../assets/herotuner.png";
+import background from "../assets/background.webp";
+import herotuner from "../assets/herotuner.webp";
 import "./styles/animations.css";
 
 export const LoadingPage = () => {
