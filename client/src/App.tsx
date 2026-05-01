@@ -1,11 +1,28 @@
-import { LoadingPage } from './pages/LoadingPage'
+import { useState } from "react"
+import background from "./assets/background.webp"
+import { LoadingPage } from "./pages/LoadingPage"
+import { TunerPage } from "./pages/TunerPage"
 
 function App() {
-  return (
-    <>
-        <LoadingPage />
-   </>
-  )
+    const [isLoading, setIsLoading] = useState(true)
+
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 4000)
+
+    return (
+        <main>
+            <img
+                src={background}
+                alt="background"
+                className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/20" />
+
+            {isLoading ? <LoadingPage /> : <TunerPage />}
+        </main>
+    )
 }
 
 export default App
