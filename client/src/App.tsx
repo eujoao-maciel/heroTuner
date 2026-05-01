@@ -1,16 +1,27 @@
-import { Routes, Route } from "react-router-dom"
-import { Layout } from "./layout/Layout.tsx"
+import { useState } from "react"
+import background from "./assets/background.webp"
 import { LoadingPage } from "./pages/LoadingPage"
 import { TunerPage } from "./pages/TunerPage"
 
 function App() {
+    const [isLoading, setIsLoading] = useState(true)
+
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 4000)
+
     return (
-        <Routes>
-            <Route element={<Layout />}>
-                <Route path="/" element={<LoadingPage />} />
-                <Route path="/tuner" element={<TunerPage />} />
-            </Route>
-        </Routes>
+        <main>
+            <img
+                src={background}
+                alt="background"
+                className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/20" />
+
+            {isLoading ? <LoadingPage /> : <TunerPage />}
+        </main>
     )
 }
 
