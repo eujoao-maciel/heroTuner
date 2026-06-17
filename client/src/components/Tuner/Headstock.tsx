@@ -6,15 +6,15 @@ export const Headstock = () => {
             className="
             flex items-center justify-center overflow-hidden
             w-[160px] h-[360px]
-            lg:w-auto lg:h-auto lg:overflow-visible
+            md:w-auto md:h-auto md:overflow-visible
         "
         >
             <img
                 src={headstock}
                 alt="headstock"
                 className="
-                    -rotate-90 w-[360px] max-w-none shrink-0
-                    lg:rotate-0 lg:w-[360px] lg:max-w-[360px]
+                    -rotate-90 w-[300px] sm:w-[360px] max-w-none shrink-0
+                    md:rotate-0 md:w-[360px] md:max-w-[360px]
                 "
             />
         </div>
