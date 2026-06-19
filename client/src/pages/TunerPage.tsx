@@ -11,14 +11,27 @@ export const TunerPage = () => {
           <TunerMode />
         </div>
 
-        <div className="col-span-2  md:col-span-1 flex flex-col
-        items-center gap-2">
+        <div
+          className="col-span-2  md:col-span-1 flex flex-col
+        items-center gap-2"
+        >
           <ProgressBar />
           <Tuner />
         </div>
 
-        <div className="col-span-2 flex items-center justify-center md:col-span-1 p-2">
-            <Headstock />
+        <div className="col-span-2 flex md:flex-col items-end justify-center md:col-span-1 p-2">
+          <div className="border flex flex-col md:flex-row gap-3">
+            <div className="border">D</div>
+            <div className="border">A</div>
+            <div className="border">E</div>
+          </div>
+          <Headstock />
+
+          <div className="flex flex-col md:flex-row gap-3">
+            <div className=" border">G</div>
+            <div className=" border">B</div>
+            <div className=" border">E</div>
+          </div>
         </div>
       </div>
     </section>
