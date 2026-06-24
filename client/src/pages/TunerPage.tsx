@@ -2,6 +2,7 @@ import { ProgressBar } from "../components/Tuner/ProgressBar.tsx";
 import { Tuner } from "../components/Tuner/Tuner.tsx";
 import { Headstock } from "../components/Tuner/Headstock.tsx";
 import { TunerMode } from "../components/ui/TunerMode.tsx";
+import "./styles/TunerPage.css"
 
 const Note = ({
   children,
