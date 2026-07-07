@@ -5,7 +5,6 @@ type Props = {
   centerNote: string;
   leftNote: string;
   rightNote: string;
-  isListening: boolean;
   onStart: () => void;
 };
 
@@ -14,7 +13,6 @@ export const Tuner = ({
   centerNote,
   leftNote,
   rightNote,
-  isListening,
   onStart,
 }: Props) => {
   return (
@@ -36,15 +34,6 @@ export const Tuner = ({
         <span className="text-3xl font-bold">{centerNote}</span>
         <span className="opacity-50 text-sm">{rightNote}</span>
       </div>
-
-      {!isListening && (
-        <button
-          onClick={onStart}
-          className="absolute -bottom-10 left-1/2 md:bottom-40 md:left-100 -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded hover:bg-black/80 transition"
-        >
-          Iniciar microfone
-        </button>
-      )}
     </div>
   );
 };
