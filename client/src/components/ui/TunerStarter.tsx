@@ -7,7 +7,7 @@ export const TunerStarter = ({ setIsTuningStarted }) => {
         onClick={() => {
           setIsTuningStarted(true);
         }}
-        className=" tuner-starter"
+        className="tuner-starter"
       >
         <div className="pointer-events-auto tuner-starter-label">AFINAR</div>
       </button>
