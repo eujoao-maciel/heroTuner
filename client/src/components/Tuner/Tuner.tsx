@@ -21,7 +21,10 @@ export const Tuner = ({
 
       <div
         ref={needleRef}
-        className="absolute left-48 w-[2px] h-[80px] bg-red-500 origin-bottom pointer-events-none"
+        className="absolute left-48 w-[2px] h-[80px] 
+        bg-red-500 origin-bottom pointer-events-none
+        bg-linear-to-t from-stone-900 to-red-400
+        "
         style={{
           transform: "translateX(-50%) rotate(0deg)",
           bottom: "35%",
