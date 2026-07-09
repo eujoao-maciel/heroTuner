@@ -32,10 +32,10 @@ export const Tuner = ({
         }}
       />
 
-      <div className="absolute inset-0 flex items-center justify-center gap-6 text-white pointer-events-none">
-        <span className="opacity-50 text-sm">{leftNote}</span>
-        <span className="text-3xl font-bold">{centerNote}</span>
-        <span className="opacity-50 text-sm">{rightNote}</span>
+      <div className="flex items-center justify-center gap-9 pointer-events-none">
+        <span className="absolute top-29 left-32 opacity-50 text-xl">{leftNote}</span>
+        <span className="absolute top-23 left-46 text-3xl font-bold">{centerNote}</span>
+        <span className="absolute top-29 left-62  opacity-50 text-xl">{rightNote}</span>
       </div>
     </div>
   );
