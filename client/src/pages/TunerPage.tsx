@@ -4,6 +4,7 @@ import { Tuner } from "../components/Tuner/Tuner.tsx";
 import { Headstock } from "../components/Tuner/Headstock.tsx";
 import { TunerMode } from "../components/ui/TunerMode.tsx";
 import { TunerStarter } from "../components/ui/TunerStarter.tsx";
+import { useTuner } from "../hooks/useTuner.ts";
 import "./styles/TunerPage.css";
 
 const Note = ({
@@ -22,14 +23,20 @@ const Note = ({
 );
 
 export const TunerPage = () => {
+  const tuner = useTuner();
   const [isTuningStarted, setIsTuningStarted] = useState(false);
+
+  const handleStart = async () => {
+    await tuner.start();
+    setIsTuningStarted(true);
+  };
 
   return (
     <section className="relative flex justify-center md:items-center w-full min-h-screen z-10 overflow-hidden">
       <div className="grid grid-cols-2 md:grid-cols-2 gap-4 p-4">
         {!isTuningStarted && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm pointer-events-none z-20">
-            <TunerStarter setIsTuningStarted={setIsTuningStarted} />
+            <TunerStarter handleStart={handleStart} />
           </div>
         )}
 
@@ -41,8 +48,13 @@ export const TunerPage = () => {
           className="col-span-2  md:col-span-1 flex flex-col
         items-center gap-2"
         >
-          <ProgressBar />
-          <Tuner />
+          <ProgressBar litSegments={tuner.litSegments} />
+          <Tuner
+            needleRef={tuner.needleRef}
+            centerNote={tuner.centerNote}
+            leftNote={tuner.leftNote}
+            rightNote={tuner.rightNote}
+          />
         </div>
 
         <div className="col-span-2 md:col-span-1 flex justify-center p-2">

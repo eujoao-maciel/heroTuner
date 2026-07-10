@@ -1,4 +1,4 @@
-export const ProgressBar = () => {
+export const ProgressBar = ({ litSegments } : { litSegments: number }) => {
   return (
     <svg
       id="tuneProgress"
@@ -59,7 +59,7 @@ export const ProgressBar = () => {
         rx="2"
         fill="url(#activeGreen)"
         filter="url(#greenGlow)"
-        opacity="0"
+        opacity={litSegments >= 1 ? 1 : 0}
       />
 
       <rect
@@ -71,7 +71,7 @@ export const ProgressBar = () => {
         rx="2"
         fill="url(#activeGreen)"
         filter="url(#greenGlow)"
-        opacity="0"
+        opacity={litSegments >= 2 ? 1 : 0}
       />
 
       <rect
@@ -83,7 +83,7 @@ export const ProgressBar = () => {
         rx="2"
         fill="url(#activeGreen)"
         filter="url(#greenGlow)"
-        opacity="0"
+        opacity={litSegments >= 3 ? 1 : 0}
       />
 
       <rect
@@ -95,7 +95,7 @@ export const ProgressBar = () => {
         rx="2"
         fill="url(#activeGreen)"
         filter="url(#greenGlow)"
-        opacity="0"
+        opacity={litSegments >= 4 ? 1 : 0}
       />
 
       <rect
@@ -107,7 +107,7 @@ export const ProgressBar = () => {
         rx="2"
         fill="url(#activeGreen)"
         filter="url(#greenGlow)"
-        opacity="0"
+        opacity={litSegments >= 5 ? 1 : 0}
       />
     </svg>
   );
