@@ -33,9 +33,9 @@ export const Tuner = ({
       />
 
       <div className="flex items-center justify-center gap-9 pointer-events-none">
-        <span className="absolute top-29 left-32 opacity-50 text-xl">{leftNote}</span>
+        <span className="absolute top-29 left-30 opacity-50 text-xl">{leftNote}</span>
         <span className="absolute top-23 left-46 text-3xl font-bold">{centerNote}</span>
-        <span className="absolute top-29 left-62  opacity-50 text-xl">{rightNote}</span>
+        <span className="absolute top-29 left-61  opacity-50 text-xl">{rightNote}</span>
       </div>
     </div>
   );
