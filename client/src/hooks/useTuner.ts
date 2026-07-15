@@ -134,11 +134,10 @@ export const useTuner = () => {
         }
 
         const hasUsableSignal =
-          rms >= MIN_RMS && // volume suficiente
-          clarity >= MIN_CLARITY && // pitch é claro (não ruído)
-          pitch >= MIN_GUITAR_FREQUENCY && // não é muito grave
-          pitch <= MAX_GUITAR_FREQUENCY; // não é muito agudo
-
+          rms >= MIN_RMS && 
+          clarity >= MIN_CLARITY && 
+          pitch >= MIN_GUITAR_FREQUENCY && 
+          pitch <= MAX_GUITAR_FREQUENCY;
         if (hasUsableSignal) {
           let activeIndex = stringIndexRef.current;
 
