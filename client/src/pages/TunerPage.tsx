@@ -49,6 +49,7 @@ export const TunerPage = () => {
                             <Note
                                 label="D"
                                 string="D3"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "D3"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -58,6 +59,7 @@ export const TunerPage = () => {
                             <Note
                                 label="A"
                                 string="A2"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "A2"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -67,6 +69,7 @@ export const TunerPage = () => {
                             <Note
                                 label="E"
                                 string="E2"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "E2"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -75,6 +78,7 @@ export const TunerPage = () => {
                             <Note
                                 label="G"
                                 string="G3"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "G3"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -84,6 +88,7 @@ export const TunerPage = () => {
                             <Note
                                 label="B"
                                 string="B3"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "B3"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -93,6 +98,7 @@ export const TunerPage = () => {
                             <Note
                                 label="E"
                                 string="E4"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "E4"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -103,6 +109,7 @@ export const TunerPage = () => {
                             <Note
                                 label="E"
                                 string="E2"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "E2"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
@@ -112,6 +119,7 @@ export const TunerPage = () => {
                             <Note
                                 label="A"
                                 string="A2"
+                                isTuned={tuner.isTuned}
                                 active={tuner.targetNote === "A2"}
                                 onClick={tuner.selectString}
                                 disabled={tuner.mode === "auto"}
