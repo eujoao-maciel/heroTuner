@@ -12,12 +12,8 @@
 
 --- 
 
-<p align="center">A modern web application for tuning electric and acoustic guitars with real-time pitch detection and visual feedback.</p>
-<p align="center">
-  <a href="https://hero-tuner-client.vercel.app/" target="_blank">
-    🌐 Live Demo
-  </a>
-</p>
+<p align="center">A modern web application for tuning electric and acoustic guitars with real-time pitch detection and visual feedback. <a href="https://hero-tuner-client.vercel.app/" target="_blank">Live Demo</a></p>
+
 
 <h2 align="center" id="About">About</h2>
 <p align="start">
